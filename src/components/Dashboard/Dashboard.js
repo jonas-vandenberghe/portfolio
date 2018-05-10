@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import injectSheet from 'react-jss';
 
+import { Grid, Row } from 'react-bootstrap';
+
 const styles = {
   dashboard: {
     display: 'flex',
-    width: '100%',
-    overflow: 'auto',
-    height: 'auto',
-    justifyContent: 'space-between'
+    flexWrap: 'wrap',
+    width: '100%'
   }
 };
 
@@ -22,7 +22,11 @@ class Dashboard extends Component {
     } = this.props.classes
 		return (
       <div className={dashboard}>
-        {children}
+        <Grid>
+          <Row>
+            {children}
+          </Row>
+        </Grid>
       </div>
 		);
 	}
