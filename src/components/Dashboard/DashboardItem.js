@@ -89,6 +89,8 @@ class DashboardItem extends Component {
       desktopSize,
       tabletSize,
       phoneSize,
+      hoverTitle,
+      hoverSubtitle,
       children
     } = this.props
 
@@ -108,8 +110,8 @@ class DashboardItem extends Component {
             children ? children : <div className={dashboardProject}></div>
           }
           {!this.props.noHover ? this.state.hover ? <div className={this.props.classes.hover}>
-            <div className={title}>title</div>
-            <div className={description}>description</div>
+            <div className={title}>{hoverTitle}</div>
+            <div className={description}>{hoverSubtitle}</div>
           </div> : '' : ''}
         </a>
       </Col>

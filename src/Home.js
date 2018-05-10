@@ -53,12 +53,12 @@ class Home extends Component {
             <div className={this.props.classes.button}>Lees meer</div>
           </div>
         </DashboardItem>
-        <DashboardItem desktopSize={4} tabletSize={6} phoneSize={12} graphic="../seaqh/thumbs/seaqh-thumb.png" url="#" size={4} />
+        <DashboardItem hoverTitle="Seaqh" hoverSubtitle="The guy behind it" desktopSize={4} tabletSize={6} phoneSize={12} graphic="../seaqh/thumbs/seaqh-thumb.png" url="#" size={4} />
       {
         projects.map((project, index) => {
-          const { desktopSize, tabletSize, phoneSize } = project;
+          const { desktopSize, tabletSize, phoneSize, title, subtitle } = project;
           return (
-            <DashboardItem desktopSize={desktopSize} tabletSize={tabletSize} phoneSize={phoneSize} key={index} graphic={project.thumbnail} url={project.url} size={project.size}/>
+            <DashboardItem hoverTitle={title} hoverSubtitle={subtitle} desktopSize={desktopSize} tabletSize={tabletSize} phoneSize={phoneSize} key={index} graphic={project.thumbnail} url={project.url} size={project.size}/>
           );
         })
       }
