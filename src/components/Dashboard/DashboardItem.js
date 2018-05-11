@@ -1,22 +1,6 @@
 import React, { Component } from 'react';
 import injectSheet from 'react-jss';
 import { Col } from 'react-bootstrap';
-import classNames from 'classnames';
-
-
-// const calculateBlock = (size) => {
-//   const space = calculateSpacePixelsToPercentage(8);
-
-//   if (size === 4) {
-//     return '100%'
-//   }
-
-//   return 25 * size - space + '%';
-// }
-
- const calculateSpacePixelsToPercentage = (pixels) => {
-   return `${pixels / 900 * 100}`;
- }
 
 const styles = {
   dashboardProject: props => {
@@ -61,7 +45,7 @@ const styles = {
     fontSize: '36px',
     fontWeight: '600',
   },
-  title: {
+  description: {
     fontSize: '20px',
     fontWeight: '500',
   },
@@ -85,7 +69,6 @@ class DashboardItem extends Component {
 	render() {
     const {
       url,
-      custom,
       desktopSize,
       tabletSize,
       phoneSize,
@@ -109,7 +92,7 @@ class DashboardItem extends Component {
           {
             children ? children : <div className={dashboardProject}></div>
           }
-          {!this.props.noHover ? this.state.hover ? <div className={this.props.classes.hover}>
+          {!this.props.noHover ? this.state.hover ? <div className={hover}>
             <div className={title}>{hoverTitle}</div>
             <div className={description}>{hoverSubtitle}</div>
           </div> : '' : ''}

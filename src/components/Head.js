@@ -6,8 +6,7 @@ import View from './View.js';
 const styles = {
   head: {
     height: '100vh',
-    background: 'rgb(2,0,36)',
-    background: 'linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(255,179,151,1) 0%, rgba(244,106,160,1) 100%)',
+    background: 'rgb(2,0,36) linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(255,179,151,1) 0%, rgba(244,106,160,1) 100%)',
     color: '#FFFFFF',
   },
   jones: {
@@ -47,7 +46,7 @@ class Head extends Component {
     const { head, content, title, description, button } = this.props.classes;
   	return (
       <div className={head}>
-        <img className={this.props.classes.jones} src="../images/jones.png"/>
+        <img className={this.props.classes.jones} src="../images/jones.png" alt="jones" />
         <View>
           <div className={content}>
             <div className={title}>Welkom</div>

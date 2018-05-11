@@ -26,19 +26,19 @@ class Menu extends Component {
 		return (
 			<Navbar className={this.props.classes.menu} inverse collapseOnSelect>
 	      <Nav className={this.props.classes.menuItems} pullRight>
-		      <NavItem eventKey={1} href="#">
+		      <NavItem eventKey={1} href="/">
 		        Home
 		      </NavItem>
-		      <NavItem eventKey={2} href="#">
+		      <NavItem eventKey={2} href="/about">
 		        About
 		      </NavItem>
-		      <NavItem eventKey={3} href="#">
+		      <NavItem eventKey={3} href="/work">
 		        Work
 		      </NavItem>
-		      <NavItem eventKey={4} href="#">
+		      <NavItem eventKey={4} href="/school">
 		        School
 		      </NavItem>
-		      <NavItem eventKey={5} href="#">
+		      <NavItem eventKey={5} href="/contact">
 		        Contact
 		      </NavItem>
 		    </Nav>
