@@ -15,7 +15,7 @@ const styles = {
   dashboardBlock: {
     display: 'inline-block',
     position: 'relative',
-    height: '200px',
+    height: '250px',
     textDecoration: 'none',
     width: '100%',
     '&:hover': {
@@ -24,13 +24,14 @@ const styles = {
   },
   'col': {
     padding: '4px',
-    height: '200px',
+    height: '250px',
     margin: '4px 0 4px 0'
   },
   'hover': {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    textAlign: 'center',
     flexDirection: 'column',
     backgroundColor: 'rgba(33, 33, 33, 0.9)',
     position: 'absolute',
@@ -42,11 +43,11 @@ const styles = {
     color: '#FFFFFF'
   },
   title: {
-    fontSize: '36px',
+    fontSize: '1.5rem',
     fontWeight: '600',
   },
   description: {
-    fontSize: '20px',
+    fontSize: '1.2rem',
     fontWeight: '500',
   },
   '@keyframes fadein': {

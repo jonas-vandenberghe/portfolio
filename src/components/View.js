@@ -11,7 +11,7 @@ const styles = {
   }
 };
 
-class Head extends Component {
+class View extends Component {
 	render() {
   	return (
       <div className={this.props.classes.view}>
@@ -21,4 +21,4 @@ class Head extends Component {
 	}
 }
 
-export default injectSheet(styles)(Head);
+export default injectSheet(styles)(View);

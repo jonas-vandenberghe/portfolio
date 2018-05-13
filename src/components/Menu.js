@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import injectSheet from 'react-jss';
 
 import {Navbar, Nav, NavItem} from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 
 const styles = {
   menu: {
@@ -21,28 +22,51 @@ const styles = {
   }
 };
 
+const menuItems = [
+  {
+    name: 'home',
+    url: '/home'
+  },
+  {
+    name: 'about',
+    url: '/about'
+  },
+  {
+    name: 'work',
+    url: '/work'
+  },
+  {
+    name: 'school',
+    url: '/school'
+  },
+  {
+    name: 'contact',
+    url: '/contact'
+  }
+];
+
 class Menu extends Component {
+  state = {
+
+  }
 	render() {
 		return (
-			<Navbar className={this.props.classes.menu} inverse collapseOnSelect>
+      <Navbar inverse className={this.props.classes.menu}>
+      <Navbar.Header><Navbar.Toggle /></Navbar.Header>
+			<Navbar.Collapse>
 	      <Nav className={this.props.classes.menuItems} pullRight>
-		      <NavItem eventKey={1} href="/">
-		        Home
-		      </NavItem>
-		      <NavItem eventKey={2} href="/about">
-		        About
-		      </NavItem>
-		      <NavItem eventKey={3} href="/work">
-		        Work
-		      </NavItem>
-		      <NavItem eventKey={4} href="/school">
-		        School
-		      </NavItem>
-		      <NavItem eventKey={5} href="/contact">
-		        Contact
-		      </NavItem>
+          {menuItems.map((item, index) => {
+            return (
+              <LinkContainer key={index} to={item.url}>
+                <NavItem eventKey={index + 1}>
+                  {item.name}
+                </NavItem>
+              </LinkContainer>
+            );
+          })}
 		    </Nav>
-	    </Navbar>
+	    </Navbar.Collapse>
+    </Navbar>
 		);
 	}
 }

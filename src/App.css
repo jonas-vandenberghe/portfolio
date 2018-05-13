@@ -1,3 +1,25 @@
+html {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 570px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 18px;
+  }
+}
+
 body {
   background-color: #3B3B3B;
   font-family: 'Montserrat', sans-serif;

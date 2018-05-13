@@ -5,14 +5,15 @@ const styles = {
   footer: {
     textAlign: 'center',
     color: '#FFFFFF',
-    padding: '64px 0 24px 0'
+    padding: '64px 0 24px 0',
+    fontSize: '0.8rem'
   },
   creatorName: {
     color: '#BCEF73'
   }
 };
 
-class ProjectDetail extends Component {
+class Footer extends Component {
 	render() {
     const {
       footer,
@@ -33,4 +34,4 @@ class ProjectDetail extends Component {
 	}
 }
 
-export default injectSheet(styles)(ProjectDetail);
+export default injectSheet(styles)(Footer);

@@ -22,15 +22,15 @@ const styles = {
     justifyContent: 'center'
   },
   title: {
-    fontSize: '72px',
+    fontSize: '4.5rem',
     fontWeight: '600',
     marginBottom: '24px'
   },
   description: {
-    fontSize: '16px',
+    fontSize: '1rem',
     fontWeight: '500',
     marginBottom: '64px',
-    width: '676px'
+    maxWidth: '676px'
   },
   button: {
     padding: '16px',

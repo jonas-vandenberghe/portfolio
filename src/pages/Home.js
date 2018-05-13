@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import injectSheet from 'react-jss';
 
-import Dashboard from './components/Dashboard/Dashboard';
-import DashboardItem from './components/Dashboard/DashboardItem';
+import Dashboard from '../components/Dashboard/Dashboard';
+import DashboardItem from '../components/Dashboard/DashboardItem';
 
-import projects from './fixtures/projects';
+import projects from '../fixtures/projects';
 
 const styles = {
   intro: {
@@ -12,20 +12,20 @@ const styles = {
     textAlign: 'left',
     padding: '24px',
     color: '#FFFFFF',
-    height: '200px',
+    height: '250px',
     position: 'relative',
     '& :last-child': {
       textAlign: 'right',
     }
   },
   title: {
-    fontSize: '36px',
+    fontSize: '2rem',
     fontWeight: '600',
     marginBottom: '16px'
   },
   content: {
     fontWeight: '500',
-    fontSize: '16px',
+    fontSize: '1rem',
     color: '#DBDBDB',
     lineHeight: '24px',
     marginBottom: '16px',
@@ -33,7 +33,7 @@ const styles = {
     overflow: 'hidden'
   },
   button: {
-    display: 'inline', 
+    display: 'inline',
     position: 'absolute',
     right: '16px',
     'bottom': '16px'
@@ -46,7 +46,7 @@ class Home extends Component {
       <Dashboard>
         <DashboardItem noHover desktopSize={8} tabletSize={6} phoneSize={12} url="#" size={8}>
           <div className={this.props.classes.intro}>
-            <div className={this.props.classes.title}>Hey, I'm Jones</div>
+            <div className={this.props.classes.title}>Hey, I'm Jones!</div>
             <div className={this.props.classes.content}>
               Welcome on my dashboard, here you have an small overview over some projects. If you wanna know more about me. Then press the button.
             </div>

@@ -8,13 +8,13 @@ const styles = {
     marginBottom: '24px'
   },
   projectTitle: {
-    fontSize: '36px',
+    fontSize: '2rem',
     textTransform: 'uppercase',
     color: '#FFFFFF',
     fontWeight: '600'
   },
   projectSubtitle: {
-    fontSize: '20px',
+    fontSize: '1rem',
     color: 'rgba(255, 255, 255, 0.7)',
     fontWeight: '500'
   },
@@ -23,11 +23,12 @@ const styles = {
     fontWeight: '400',
     lineHeight: '28px',
     width: '50%',
-    marginBottom: '24px'
+    marginBottom: '48px'
   },
   projectGraphic: {
     '& > img': {
       width: '100%',
+      marginBottom: '16px',
       borderRadius: props => {
         return props.roundedImg ? '24px' : '0';
       }
@@ -51,7 +52,7 @@ class ProjectDetail extends Component {
       title,
       subtitle,
       description,
-      graphic
+      graphics
     } = this.props
 		return (
       <div className={projectDetail}>
@@ -65,7 +66,11 @@ class ProjectDetail extends Component {
           </div>
         </div>
         <div className={projectGraphic}>
-          <img src={graphic}></img>
+          {
+            graphics.map((graphic, index) => {
+              return <img key={index} src={graphic}></img>
+            })
+          }
         </div>
       </div>
 		);
