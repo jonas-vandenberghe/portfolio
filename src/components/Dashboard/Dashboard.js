@@ -7,7 +7,10 @@ const styles = {
   dashboard: {
     display: 'flex',
     flexWrap: 'wrap',
-    width: '100%'
+    width: '100%',
+    '& > .container': {
+      width: '100%'
+    }
   }
 };
 

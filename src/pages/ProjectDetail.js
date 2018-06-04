@@ -1,30 +1,12 @@
 import React, { Component } from 'react';
 import injectSheet from 'react-jss';
 
+import ProjectHead from './ProjectHead';
+import Dashboard from '../components/Dashboard/Dashboard';
+import DashboardItem from '../components/Dashboard/DashboardItem'
+
 const styles = {
   projectDetail: {},
-  projectHead: {
-    width: '100%',
-    marginBottom: '24px'
-  },
-  projectTitle: {
-    fontSize: '2rem',
-    textTransform: 'uppercase',
-    color: '#FFFFFF',
-    fontWeight: '600'
-  },
-  projectSubtitle: {
-    fontSize: '1rem',
-    color: 'rgba(255, 255, 255, 0.7)',
-    fontWeight: '500'
-  },
-  projectDescription: {
-    color: '#FFFFFF',
-    fontWeight: '400',
-    lineHeight: '28px',
-    width: '50%',
-    marginBottom: '48px'
-  },
   projectGraphic: {
     '& > img': {
       width: '100%',
@@ -37,14 +19,21 @@ const styles = {
 };
 
 class ProjectDetail extends Component {
+  renderGrid = (images) => {
+    <Dashboard>
+      {
+        images.map((image, index) => {
+          return (
+            <DashboardItem desktopSize={4} tabletSize={6} phoneSize={8} key={index} graphic={image}/>
+          );
+        })
+      }
+    </Dashboard>
+  }
 	render() {
     const {
       projectDetail,
       projectHead,
-      projectContent,
-      projectTitle,
-      projectSubtitle,
-      projectDescription,
       projectGraphic
     } = this.props.classes
 
@@ -52,24 +41,22 @@ class ProjectDetail extends Component {
       title,
       subtitle,
       description,
-      graphics
+      graphics,
+      gridImages
     } = this.props
 		return (
       <div className={projectDetail}>
-  			<div className={projectHead}>
-          <div className={projectTitle}>{title}</div>
-          <div className={projectSubtitle}>{subtitle}</div>
-        </div>
-        <div className={projectContent}>
-          <div className={projectDescription}>
-            {description}
-          </div>
-        </div>
+        <ProjectHead title={title} subtitle={subtitle} description={description}/>
         <div className={projectGraphic}>
           {
             graphics.map((graphic, index) => {
-              return <img key={index} src={graphic}></img>
+              return <img key={index} src={graphic} alt=''></img>
             })
+          }
+        </div>
+        <div>
+          {
+            gridImages ? this.renderGrid(gridImages) : false
           }
         </div>
       </div>

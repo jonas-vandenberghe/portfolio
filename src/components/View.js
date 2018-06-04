@@ -5,9 +5,14 @@ const styles = {
   view: {
     position: 'relative',
     padding: '24px',
-    maxWidth: '900px',
+    paddingTop: '64px',
+    // maxWidth: '900px',
     margin: 'auto',
-    height: '100%'
+    height: '100%',
+    '@media(max-width: 676px)': {
+      padding: '0',
+      paddingTop: '50px'
+    }
   }
 };
 

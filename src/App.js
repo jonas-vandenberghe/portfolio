@@ -21,24 +21,25 @@ class App extends Component {
       <div className="App">
       	<Route exact path="/home" component={Head}/>
       	<Menu />
-      	<View>
           <Route exact path="/home" component={Home}/>
           {projects.map((project, index) => {
             return (
               <Route key={index} path={project.url} render={(props) => (
-                <ProjectDetail
-                  title={project.title}
-                  subtitle={project.subtitle}
-                  description={project.description}
-                  graphics={project.graphics}
-                />
+                <View>
+                  <ProjectDetail
+                    title={project.title}
+                    subtitle={project.subtitle}
+                    description={project.description}
+                    graphics={project.graphics}
+                    gridImages={project.gridImages}
+                  />
+                </View>
               )}/>
             );
           })}
-        </View>
         <Route exact path="/about" component={About}/>
         <Route exact path="/work" component={Work}/>
-        <Route exact path="/school" component={School}/>
+        <Route path="/school" component={School}/>
         <Route exact path="/contact" component={Contact}/>
         <Footer year="2018" type="design" creator="Jones"/>
       </div>

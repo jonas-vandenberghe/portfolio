@@ -4,12 +4,22 @@ import injectSheet from 'react-jss';
 import {Navbar, Nav, NavItem} from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
+import classNames from 'classnames';
+
 const styles = {
   menu: {
   	backgroundColor: '#282828',
   	color: '#FFFFFF',
   	border: 'none',
-  	borderRadius: '0'
+  	borderRadius: '0',
+    marginBottom: '0',
+  },
+  sticky: {
+    position: 'fixed',
+    top: '0',
+    right: '0',
+    left: '0',
+    zIndex: '1'
   },
   menuItems: {
   	textTransform: 'uppercase',
@@ -37,7 +47,7 @@ const menuItems = [
   },
   {
     name: 'school',
-    url: '/school'
+    url: '/school/choose'
   },
   {
     name: 'contact',
@@ -46,12 +56,40 @@ const menuItems = [
 ];
 
 class Menu extends Component {
-  state = {
-
+  constructor(props) {
+    super(props)
+    this.menu = React.createRef()
   }
+  state = {
+    sticky: false
+  }
+  componentDidMount() {
+    this.handleScroll();
+    window.addEventListener('scroll', () => this.handleScroll());
+  }
+
+  handleScroll = () => {
+    const el = document.querySelector('#menu');
+    const header = document.querySelector('#header');
+    let elDistanceToTop = el ? el.getBoundingClientRect().top : false;
+    let headerDistanceToBottom = header ? header.getBoundingClientRect().bottom : false;
+
+    if (headerDistanceToBottom && headerDistanceToBottom >= 0) {
+      this.setState({
+        sticky: false
+      })
+    }
+
+    else if (elDistanceToTop <= 0) {
+      this.setState({
+        sticky: true
+      })
+    }
+  }
+
 	render() {
 		return (
-      <Navbar inverse className={this.props.classes.menu}>
+      <Navbar ref={this.menu} id="menu" inverse className={classNames(this.props.classes.menu, this.state.sticky ? this.props.classes.sticky : '')}>
       <Navbar.Header><Navbar.Toggle /></Navbar.Header>
 			<Navbar.Collapse>
 	      <Nav className={this.props.classes.menuItems} pullRight>

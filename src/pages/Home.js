@@ -53,15 +53,17 @@ class Home extends Component {
             <div className={this.props.classes.button}>Lees meer</div>
           </div>
         </DashboardItem>
-        <DashboardItem hoverTitle="Seaqh" hoverSubtitle="The guy behind it" desktopSize={4} tabletSize={6} phoneSize={12} graphic="../seaqh/thumbs/seaqh-thumb.png" url="#" size={4} />
+        <DashboardItem title="Seaqh" subtitle="The guy behind it" desktopSize={4} tabletSize={6} phoneSize={12} graphic="../seaqh/thumbs/seaqh-thumb.png" url="#" size={4} />
       {
         projects.map((project, index) => {
           const { desktopSize, tabletSize, phoneSize, title, subtitle } = project;
           return (
-            <DashboardItem hoverTitle={title} hoverSubtitle={subtitle} desktopSize={desktopSize} tabletSize={tabletSize} phoneSize={phoneSize} key={index} graphic={project.thumbnail} url={project.url} size={project.size}/>
+            project.highlight && <DashboardItem title={title} subtitle={subtitle} desktopSize={desktopSize} tabletSize={tabletSize} phoneSize={phoneSize} key={index} graphic={project.thumbnail} url={project.url} size={project.size}/>
           );
         })
       }
+      <DashboardItem title="My school" subtitle="I did study you know" desktopSize={4} tabletSize={6} phoneSize={12} graphic="../school/thumbs/school-thumb.png" url="/school" size={4} />
+      <DashboardItem title="View all projects" subtitle="You know you want to" desktopSize={4} tabletSize={6} phoneSize={12} graphic="../images/more.png" url="/work" size={4} />
       </Dashboard>
     );
   }

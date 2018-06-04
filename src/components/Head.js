@@ -45,7 +45,7 @@ class Head extends Component {
 	render() {
     const { head, content, title, description, button } = this.props.classes;
   	return (
-      <div className={head}>
+      <div id="header" className={head}>
         <img className={this.props.classes.jones} src="../images/jones.png" alt="jones" />
         <View>
           <div className={content}>

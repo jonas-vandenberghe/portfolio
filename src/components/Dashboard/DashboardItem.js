@@ -42,13 +42,37 @@ const styles = {
     animation: 'fadein 300ms',
     color: '#FFFFFF'
   },
-  title: {
+  blockTitle: {
     fontSize: '1.5rem',
     fontWeight: '600',
   },
-  description: {
+  blockDescription: {
     fontSize: '1.2rem',
     fontWeight: '500',
+  },
+  colorBlockOverlay: props => ({
+    background: props.green ? 'rgba(80,227,194,0.7)' : props.blue ? 'rgba(74, 144, 226, 0.7)' : props.yellow ? 'rgba(184, 233, 134, 0.7)' : '',
+    position: 'absolute',
+    top: '0',
+    bottom: '0',
+    left: '0',
+    right: '0',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
+  }),
+  colorBlockContent: {
+    textAlign: 'center'
+  },
+  colorBlockTitle: {
+    color: '#FFFFFF',
+    fontSize: '36px',
+    fontWeight: '400'
+  },
+  colorBlockSubtitle: {
+    color: '#FFFFFF',
+    fontSize: '20px',
+    fontWeight: '300'
   },
   '@keyframes fadein': {
     from: { opacity: 0 },
@@ -73,9 +97,10 @@ class DashboardItem extends Component {
       desktopSize,
       tabletSize,
       phoneSize,
-      hoverTitle,
-      hoverSubtitle,
-      children
+      title,
+      subtitle,
+      children,
+      colorBlock
     } = this.props
 
     const {
@@ -83,8 +108,12 @@ class DashboardItem extends Component {
       dashboardProject,
       col,
       hover,
-      title,
-      description
+      blockTitle,
+      blockDescription,
+      colorBlockOverlay,
+      colorBlockContent,
+      colorBlockTitle,
+      colorBlockSubtitle
     } = this.props.classes
 
 		return ( 
@@ -93,10 +122,28 @@ class DashboardItem extends Component {
           {
             children ? children : <div className={dashboardProject}></div>
           }
-          {!this.props.noHover ? this.state.hover ? <div className={hover}>
-            <div className={title}>{hoverTitle}</div>
-            <div className={description}>{hoverSubtitle}</div>
-          </div> : '' : ''}
+          {
+            !this.props.noHover
+            ? this.state.hover
+              ?
+                <div className={hover}>
+                  <div className={blockTitle}>{title}</div>
+                  <div className={blockDescription}>{subtitle}</div>
+                </div>
+              :
+                ''
+            :
+            colorBlock
+            ?
+              <div className={colorBlockOverlay}>
+                <div className={colorBlockContent}>
+                  <div className={colorBlockTitle}>{title}</div>
+                  <div className={colorBlockSubtitle}>{subtitle}</div>
+                </div>
+              </div>
+            :
+              ''
+          }
         </a>
       </Col>
 		);
