@@ -102,11 +102,11 @@ const projects = [
 	  	tabletSize: 6,
 	  	phoneSize: 12,
 		},
-  	desktopSize: 4,
+  	desktopSize: 4, // bevat 12 kolommen
   	tabletSize: 6,
   	phoneSize: 12,
 		url: '/star-tank'
-	},
+	}
 ];
 
 export default projects;

@@ -50,6 +50,13 @@ const styles = {
     fontWeight: '400',
     '&:hover': {
       background: 'linear-gradient(90deg, rgba(58,242,167,0.9) 0%, rgba(70,209,236,0.9) 100%)',
+      textDecoration: 'none',
+      'color': '#FFFFFF'
+    },
+    '&:focus': {
+      textDecoration: 'none',
+      outline: 'none',
+      'color': '#FFFFFF'
     }
   },
   social: {
@@ -75,22 +82,22 @@ const socialIcons = [
   {
     name: 'facebook',
     img: '../images/facebook.png',
-    url: '#'
+    url: 'https://www.facebook.com/Seaqh/'
   },
   {
     name: 'dribble',
     img: '../images/dribble.png',
-    url: '#'
+    url: 'https://dribbble.com/Seaqh'
   },
   {
     name: 'linkedin',
     img: '../images/linkedin.png',
-    url: '#'
+    url: 'https://www.linkedin.com/in/jonas-v-64447898/'
   },
   {
     name: 'instagram',
     img: '../images/instagram.png',
-    url: '#'
+    url: 'https://www.instagram.com/vdb_jonas/?hl=nl'
   }
 ]
 
@@ -117,13 +124,13 @@ class Contact extends Component {
                 <div className={subhead}>Of het nu gaat over een project of een simpele ‘Hey, hoe gaat het?’ I’m friendly so don’t be shy.</div>
               </div>
             </div>
-            <div className={button}>
+            <a href="mailto:vdb-jonas@hotmail.com" className={button}>
               Get in touch
-            </div>
+            </a>
             <div className={social}>
               {socialIcons.map((icon, index) => {
                 return (
-                  <Link to={icon.url}>
+                  <Link to={icon.url} target="_blank">
                     <img className={socialIcon} src={icon.img} alt={icon.name}/>
                   </Link>
                 );

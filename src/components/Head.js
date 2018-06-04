@@ -51,7 +51,7 @@ class Head extends Component {
           <div className={content}>
             <div className={title}>Welkom</div>
             <div className={description}>Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus.</div>
-            <div className={button}>Ga verder</div>
+            {/* <div className={button}>Ga verder</div> */}
           </div>
         </View>
       </div>

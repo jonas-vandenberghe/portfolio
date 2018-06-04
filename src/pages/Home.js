@@ -4,6 +4,8 @@ import injectSheet from 'react-jss';
 import Dashboard from '../components/Dashboard/Dashboard';
 import DashboardItem from '../components/Dashboard/DashboardItem';
 
+import { Link } from 'react-router-dom';
+
 import projects from '../fixtures/projects';
 
 const styles = {
@@ -36,7 +38,17 @@ const styles = {
     display: 'inline',
     position: 'absolute',
     right: '16px',
-    'bottom': '16px'
+    textDecoration: 'none',
+    bottom: '16px',
+    background: 'rgb(2,0,36) linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(160,221,255,1) 0%, rgba(145,155,253,1) 100%)',
+    borderRadius: '8px',
+    padding: '16px',
+    color: '#FFFFFF',
+    '&:hover': {
+      background: 'rgb(2,0,36) linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(130,191,225,1) 0%, rgba(115,125,223,1) 100%)',
+      color: '#FFFFFF',
+      textDecoration: 'none'
+    }
   }
 };
 
@@ -50,7 +62,7 @@ class Home extends Component {
             <div className={this.props.classes.content}>
               Welcome on my dashboard, here you have an small overview over some projects. If you wanna know more about me. Then press the button.
             </div>
-            <div className={this.props.classes.button}>Lees meer</div>
+            <Link to="/about" className={this.props.classes.button}>Lees meer</Link>
           </div>
         </DashboardItem>
         <DashboardItem title="Seaqh" subtitle="The guy behind it" desktopSize={4} tabletSize={6} phoneSize={12} graphic="../seaqh/thumbs/seaqh-thumb.png" url="#" size={4} />

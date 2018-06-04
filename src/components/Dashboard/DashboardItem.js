@@ -59,7 +59,11 @@ const styles = {
     right: '0',
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    '& > :hover': {
+      color: 'red',
+      background: props.green ? 'rgba(63, 185, 158, 0.7)' : props.blue ? 'rgba(57, 102, 190, 0.7)' : props.yellow ? 'rgba(167, 191, 98, 0.7)' : '',
+    }
   }),
   colorBlockContent: {
     textAlign: 'center'
