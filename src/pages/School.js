@@ -56,7 +56,7 @@ class School extends Component {
             <Dashboard>
               <DashboardItem blue title="Projecten" subtitle="Al mijn projecten op een rij" colorBlock noHover desktopSize={4} tabletSize={6} phoneSize={12} graphic="../school/thumbs/projects-thumb.png" url="/school/projects" size={4} />
               <DashboardItem green title="Stage" subtitle="Alles over mijn stage bij Appwise" colorBlock noHover desktopSize={4} tabletSize={6} phoneSize={12} graphic="../school/thumbs/stage-thumb.png" url="/school/stage" size={4} />
-              <DashboardItem yellow title="Blog" subtitle="Stage blog" colorBlock noHover desktopSize={4} tabletSize={6} phoneSize={12} graphic="../school/thumbs/blog-thumb.png" url="/school/blog" size={4} />
+              <DashboardItem yellow title="Blog" subtitle="Stage blog" colorBlock noHover desktopSize={4} tabletSize={6} phoneSize={12} graphic="../school/thumbs/blog-thumb.png" url="https://jonas-vandenberghe.github.io/" newTab size={4} />
             </Dashboard>
           </React.Fragment>
           )}

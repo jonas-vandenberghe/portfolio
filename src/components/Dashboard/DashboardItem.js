@@ -122,7 +122,7 @@ class DashboardItem extends Component {
 
 		return ( 
       <Col onMouseEnter={this.mouseOverToggle} onMouseLeave={this.mouseOverToggle} className={col} xs={phoneSize} sm={tabletSize} md={tabletSize} lg={desktopSize}>
-        <a href={url} className={dashboardBlock}>
+        <a target={this.props.newTab && '_blank'} href={this.props.newTab ? url : `/#${url}`} className={dashboardBlock}>
           {
             children ? children : <div className={dashboardProject}></div>
           }

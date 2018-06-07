@@ -19,9 +19,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      	<Route exact path="/home" component={Head}/>
+      	<Route exact path="/" component={Head}/>
       	<Menu />
-          <Route exact path="/home" component={Home}/>
+          <Route exact path="/" component={Home}/>
           {projects.map((project, index) => {
             return (
               <Route key={index} path={project.url} render={(props) => (

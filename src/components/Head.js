@@ -49,8 +49,8 @@ class Head extends Component {
         <img className={this.props.classes.jones} src="../images/jones.png" alt="jones" />
         <View>
           <div className={content}>
-            <div className={title}>Welkom</div>
-            <div className={description}>Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus.</div>
+            <div className={title}>Welcome</div>
+            <div className={description}>I’m a Freelance Graphic Designer living in Belgium, Antwerp. Have a look at my portfolio :) UX & UI Design, whatever you've got in mind. I'll fix it</div>
             {/* <div className={button}>Ga verder</div> */}
           </div>
         </View>

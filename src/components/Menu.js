@@ -35,7 +35,7 @@ const styles = {
 const menuItems = [
   {
     name: 'home',
-    url: '/home'
+    url: '/'
   },
   {
     name: 'about',

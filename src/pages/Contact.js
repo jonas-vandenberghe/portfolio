@@ -130,9 +130,9 @@ class Contact extends Component {
             <div className={social}>
               {socialIcons.map((icon, index) => {
                 return (
-                  <Link to={icon.url} target="_blank">
+                  <a href={icon.url} target="_blank">
                     <img className={socialIcon} src={icon.img} alt={icon.name}/>
-                  </Link>
+                  </a>
                 );
               })}
             </div>

@@ -95,7 +95,7 @@ const projects = [
 		customProject: true, //verschijnt op projectspage
 		subtitle: 'Gameapplicatie demo',
 		description: 'Een opdracht uit mijn multimedia opleiding. Hierbij moest ik een spel verzinnen en nadien ook animeren.',
-  	graphics: ['../star-tank/images/star-tank-1.png', '../star-tank/images/star-tank-2.png'],
+  	graphics: ['../star-tank/images/star-tank-1.png', '../star-tank/images/startank_demo.mp4'],
   	thumbnail: '../star-tank/thumbs/star-tank-thumb.png',
 		workSizes: {
 			desktopSize: 4,
@@ -106,7 +106,93 @@ const projects = [
   	tabletSize: 6,
   	phoneSize: 12,
 		url: '/star-tank'
-	}
+	},
+		{
+		title: 'Geïntegreerde proef',
+		customProject: true, //verschijnt op projectspage
+		subtitle: 'de open ruimte',
+		description: 'Ik heb mijn eindwerk geschreven in het kader van mijn geïntegreerde proef. Om mijn diploma te behalen heb ik een nieuwe huisstijl, website en een promofilmpje ontworpen voor het bedrijf De Open Ruimte.',
+  	graphics: ['../openruimte/images/finaallogo.png', '../openruimte/images/gip-2.png', '../openruimte/images/gip-3.png', '../openruimte/images/gip-4.png', '../openruimte/images/gip-5.png', '../openruimte/images/gip-6.png'],
+  	thumbnail: '../openruimte/thumbs/openruimte-thumb.png',
+		workSizes: {
+			desktopSize: 4,
+	  	tabletSize: 6,
+	  	phoneSize: 12,
+		},
+  	desktopSize: 4, // bevat 12 kolommen
+  	tabletSize: 6,
+  	phoneSize: 12,
+		url: '/openruimte'
+	},
+		{
+		title: 'Verhaalpunt',
+		customProject: true, //verschijnt op projectspage
+		subtitle: 'Webontwikkeling',
+		description: 'Project waarbij we een  website beter moesten maken. Hierbij heb ik het simpel en overzichtelijk gehouden. Makkelijk voor de gebruiker. ',
+  	graphics: ['../verhaalpunt/images/verhaalpunt-1.png',],
+  	thumbnail: '../verhaalpunt/thumbs/verhaalpunt-thumb.png',
+		workSizes: {
+			desktopSize: 4,
+	  	tabletSize: 6,
+	  	phoneSize: 12,
+		},
+  	desktopSize: 4, // bevat 12 kolommen
+  	tabletSize: 6,
+  	phoneSize: 12,
+		url: '/verhaalpunt'
+	},
+		{
+		title: 'Pure Pauze',
+		customProject: true, //verschijnt op projectspage
+		subtitle: 'Webontwikkeling',
+		description: 'Project waarbij we een website moesten ontwikkelen voor het nieuwe restaurant dat ondertussen geopend is. www.purepauze.be',
+  	graphics: ['../purepauze/images/purepauze-1.png',],
+  	thumbnail: '../purepauze/thumbs/purepauze-thumb.png',
+		workSizes: {
+			desktopSize: 4,
+	  	tabletSize: 6,
+	  	phoneSize: 12,
+		},
+  	desktopSize: 4, // bevat 12 kolommen
+  	tabletSize: 6,
+  	phoneSize: 12,
+		url: '/purepauze'
+	},
+	// VANAF HIER NAKIJKEN EN OF IMAGES NOG IN PLAATSEN
+		{
+		title: 'Dodge It',
+		customProject: true, //verschijnt op projectspage
+		subtitle: 'Game applicatie (onontwikkeld)',
+		description: 'Soms krijg ik fantastische ideeën en werk ik deze uit. Graag had ik deze ontwikkeld, maar hier ben ik niet in geslaagd.',
+  	graphics: ['../dodge-it/images/dodge-it.png',],
+  	thumbnail: '../dodge-it/thumbs/dodge-it-thumb.png',
+		workSizes: {
+			desktopSize: 4,
+	  	tabletSize: 6,
+	  	phoneSize: 12,
+		},
+  	desktopSize: 4, // bevat 12 kolommen
+  	tabletSize: 6,
+  	phoneSize: 12,
+		url: '/dodge-it'
+	},
+		{
+		title: 'Asbest',
+		stage: true, // verschijnt op stagepage
+		subtitle: 'Campagne Applicatie',
+		description: 'Applicatie waarbij men aan de hand van een app kan ondervinden of men asbest heeft of niet.',
+  	graphics: ['../asbest/images/asbest-1.png'],
+  	thumbnail: '../asbest/thumbs/asbest-thumb.png',
+		workSizes: {
+			desktopSize: 4,
+	  	tabletSize: 6,
+	  	phoneSize: 12,
+		},
+  	desktopSize: 8,
+  	tabletSize: 6,
+  	phoneSize: 12,
+		url: '/asbest'
+	},
 ];
 
 export default projects;
